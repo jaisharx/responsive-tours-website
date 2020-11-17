@@ -1,3 +1,11 @@
+:root {
+    --primary-gradient: linear-gradient(
+        135deg,
+        rgba(131, 24, 99, 0.9) 0%,
+        rgba(102, 18, 70, 0.8) 100%
+    );
+}
+
 header {
     width: 100%;
     height: 5rem;
@@ -74,8 +82,7 @@ nav {
 .hero {
     width: 100%;
     height: 80vh;
-    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%),
-        url('/assets/images/header-bg.jpg') center no-repeat;
+    background: var(--primary-gradient), url('/assets/images/baby-image.jpg') center no-repeat;
     background-size: cover;
     position: relative;
 }
@@ -105,7 +112,7 @@ nav {
     }
 
     p {
-        text-transform: lowercase;
+        text-transform: initial;
     }
 }
 
@@ -122,8 +129,6 @@ nav {
         background-color: #ce587b;
     }
 }
-
-/* experience section */
 
 .experience-outdoors {
     padding: 0;
@@ -146,7 +151,7 @@ nav {
     }
 
     p {
-        text-transform: lowercase;
+        text-transform: capitalize;
     }
 }
 
@@ -174,11 +179,7 @@ nav {
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: linear-gradient(
-            135deg,
-            rgba(49, 24, 131, 0.9) 0%,
-            rgba(72, 56, 149, 0.8) 100%
-        );
+        background: var(--primary-gradient);
         z-index: -1;
     }
 
@@ -212,13 +213,13 @@ nav {
 .testimonials {
     width: 100%;
     height: 80vh;
-    background: linear-gradient(135deg, rgba(49, 24, 131, 0.9) 0%, rgba(72, 56, 149, 0.8) 100%),
+    background: var(--primary-gradient),
         url('/assets/images/testimonials-bg.jpg') center no-repeat fixed;
     background-size: cover;
     position: relative;
 
     &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: -3px;
         left: 0;
@@ -243,6 +244,9 @@ nav {
     padding: 0 1.5rem;
     margin-bottom: 2rem;
     position: relative;
+    width: 50rem;
+    margin: 0 auto;
+    margin-top: 8rem;
 
     i {
         position: absolute;
@@ -251,16 +255,17 @@ nav {
         transform: translateX(-50%);
         font-size: 8rem;
         color: #eb648c;
-        opacity: .5;
+        opacity: 0.5;
         z-index: -1;
     }
 }
 
 .testimonial-customer img {
-    width: 10rem;
-    height: 10rem;
+    width: 16rem;
+    height: 16rem;
     border-radius: 50%;
     border: 3px solid #eb648c;
+    background-size: cover;
 }
 
 /* adventure section */
@@ -279,7 +284,7 @@ nav {
 
 footer {
     padding: 2.5rem 0;
-    background-color: #d7d4ed;
+    background-color: #f7caeb;
     text-align: center;
     color: rgba(0, 0, 0, 0.7);
 }
@@ -298,7 +303,7 @@ footer {
         background: url('/assets/images/wave-medium.png');
         background-size: cover;
     }
-    
+
     .testimonials::before {
         height: 9.4rem;
         background: url('/assets/images/wave-medium-reversed.png');
@@ -334,7 +339,8 @@ footer {
         margin: 0 2.5rem;
     }
 
-    .nav-link, .current {
+    .nav-link,
+    .current {
         color: #fafafa;
         position: relative;
         font-size: 1.3rem;
@@ -342,10 +348,10 @@ footer {
 
     .nav-link::before,
     .current::before {
-        content: "";
+        content: '';
         position: absolute;
         left: 0;
-        bottom: -.5rem;
+        bottom: -0.5rem;
         background-color: #eb648c;
         width: 100%;
         height: 2px;
@@ -372,7 +378,6 @@ footer {
 
     .title-heading h1 {
         font-size: 2.5rem;
-
     }
 }
 
@@ -382,7 +387,7 @@ footer {
         background: url('/assets/images/wave-large.png');
         background-size: cover;
     }
-    
+
     .testimonials::before {
         height: 22.7rem;
         background: url('/assets/images/wave-large-reversed.png');
